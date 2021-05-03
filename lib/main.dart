@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import './screens/welcomeScreen.dart';
 
 class MyApp extends StatefulWidget {
   @override
@@ -11,7 +14,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: "COVID-19",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: ThemeData(
+        fontFamily: GoogleFonts.questrial().fontFamily,
+      ),
       home: Covid(),
     );
   }
@@ -20,7 +25,9 @@ class _MyAppState extends State<MyApp> {
 class Covid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: WelcomeScreen(),
+    );
   }
 }
 
